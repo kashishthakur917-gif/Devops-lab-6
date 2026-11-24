@@ -21,7 +21,9 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
+        working-directory: my-node-app
         run: npm install
 
       - name: Run tests
-        run: node my-node-app/test.js
+        working-directory: my-node-app
+        run: node test.js
